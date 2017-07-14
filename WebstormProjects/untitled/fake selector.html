@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fake selector</title>
+    <style type="text/css">
+        p:first-line{color: #b3d4fc}
+        div:first-letter{color: crimson}
+        li:before{content: "本页的 "}
+        li:after{
+            content: "(仅用于测试)";
+            font-size: small;
+            color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+<p>第一行。<br/>第二行。</p>
+<div>这是中文段落。</div>
+<div>This is an English paragraph.</div>
+<li>项目列表1</li>
+<li>项目列表2</li>
+<li>项目列表3</li>
+</body>
+</html>
