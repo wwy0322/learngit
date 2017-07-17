@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>read-only与read-write伪类选择器</title>
+    <style type="text/css">
+        input[type="text"]:read-only{
+            background-color: #cccccc;
+        }
+        input[type="text"]:read-write{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p>姓名：<input type="text" name="name"></p>
+<p>地址：<input type="text" name="address" value="北京市" readonly="readonly"></p>
+</body>
+</html>
