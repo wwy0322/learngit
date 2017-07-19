@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>追加项目编号</title>
+    <style type="text/css">
+        h1:before{
+            content: '第' counter(mycounter,upper-alpha) '章''.';
+            color: #b3d4fc;
+            font-size: 30px;
+        }
+        h1{
+            counter-increment: mycounter;
+            counter-reset: subcounter;
+        }
+        p:before{
+            content: counter(subcounter,lower-alpha) '. ';
+        }
+        p{
+            counter-increment: subcounter;
+        }
+    </style>
+</head>
+<body>
+<h1>大标题</h1>
+<p>示例文字1</p>
+<p>示例文字1</p>
+<p>示例文字1</p>
+<h1>大标题</h1>
+<p>示例文字2</p>
+<p>示例文字2</p>
+<p>示例文字2</p>
+<h1>大标题</h1>
+<p>示例文字3</p>
+<p>示例文字3</p>
+<p>示例文字3</p>
+</body>
+</html>
