@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+</head>
+<style type="text/css">
+    div.div1{
+        background-color: #b3d4fc;
+        color: #000000;
+        width: 300px;
+        transition: background-color 1s linear ,color 1s linear,width 1s linear;
+    }
+    div.div1:hover {
+        background-color: #cccccc;
+        color: #FFFFFF;
+        width: 400px;
+    }
+    img{
+        position: absolute;
+        top: 0px;
+        left:0;
+        z-index: -1;
+        
+        tansform:rotate(0deg);
+        -webkit-transition: left 2s linear,transform 1s linear;
+        -moz-transition: left 1s linear,transform 1s linear;
+        -ms-transition: left 1s linear,transform 1s linear ;
+        -o-transition: left 1s linear,transform 1s linear ;
+        transition: left 1s linear,transform 1s linear;
+    }
+    div.div2:active img{
+        position:absolute;
+        left: 100px;
+
+        -webkit-transform: rotate(720deg);
+        -moz-transform: rotate(720deg);
+        -ms-transform: rotate(720deg);
+        -o-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+    div.div3{
+        position: absolute;
+        background-color: yellow;
+        top: 100px;
+        width:500px;
+    }
+    @keyframes mycolor {
+        0%{
+            background-color: red;
+            transform: rotate(0deg);
+            opacity: 0;
+        }
+        40%{
+            background-color: #b3d4fc;
+            transform: rotate(30deg);
+            opacity:1;
+        }
+        70%{
+            background-color: orange;
+            transform: rotate(-30deg);
+        }
+        100%{
+            background-color: antiquewhite;
+            transform: rotate(0deg);
+        }
+    }
+    div.div3:hover{
+        animation-name: mycolor;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+    }
+
+</style>
+<body>
+<div class="div1">example</div>
+<div class="div2"><img src="img/pic1.jpeg" alt="*" title=""></div>
+<div class="div3">example 2</div>
+</body>
+</html>
