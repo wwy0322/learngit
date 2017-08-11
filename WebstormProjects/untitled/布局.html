@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局相关样式</title>
+</head>
+<style type="text/css">
+    div#div1{
+        -webkit-column-width: 20em;
+        -moz-column-width: 20em;
+        column-width: 20em;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 3em;
+        -moz-column-gap: 3em;
+        column-gap: 3em;
+        column-rule: 5px dashed red;
+    }
+    div#div3{
+        width: 100%;
+        background-color: yellow;
+        height: 200px;
+    }
+    #container{
+        display: flex;
+        flex-direction: row;
+    }
+    #left-sidebar{
+        width: 200px;
+        padding:20px;
+        background-color: orange;
+        flex:1;
+    }
+    #right-sidebar{
+        padding:20px;
+        width:200px;
+        background-color: yellow;
+        flex:1;
+    }
+    #contents{
+        padding: 20px;
+        flex: 2;
+        background-color: #b3d4fc;
+    }
+    #left-sidebar,#contents,#right-sidebar{
+        box-sizing: border-box;
+    }
+    #container1{
+        display: flex;
+        border:solid 5px cadetblue;
+        flex-direction:row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        width: 300px;
+        height: 400px;
+        align-content: center;
+    }
+    #txt1,#txt2,#txt3,#txt4,#txt5,#txt6,#txt7,#txt8,#txt9{
+        width: 100px;
+        height: 100px;
+    }
+    #txt1,#txt4,#txt7{
+        background-color: orange;
+    }
+    #txt2,#txt5,#txt8{
+        background-color: #b3d4fc;
+    }
+    #txt3,#txt6,#txt9{
+        background-color: antiquewhite;
+    }
+    #container2{
+        width: 500px;
+        background-color: pink;
+    }
+    #foo{
+        width: calc(50% - 100px);
+        background-color: antiquewhite;
+    }
+</style>
+<script>
+    function changeWidth() {
+        document.getElementById("container2").style.width="1000px";
+    }
+</script>
+<body>
+<div>多栏布局</div>
+<div id="div1">
+    <img src="img/pic1.jpeg">
+    <p>示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。
+        比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。
+        比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。</p>
+
+
+    <p>示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。
+        比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。
+        比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。示例文字。比较长的一段文字。</p>
+</div>
+<div id="div3">本页其他内容。</div>
+<div>盒布局</div>
+<div id="container">
+    <div id="left-sidebar">
+        <h2>左侧边栏</h2>
+        <ul>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+        </ul>
+    </div>
+    <div id="contents">
+        <h2>内容</h2>
+        <p>实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。
+            实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。
+            实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。
+            实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。实例内容。</p>
+    </div>
+    <div id="right-sidebar">
+        <h2>右侧边栏</h2>
+        <ul>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+            <li><a href="">超链接</a></li>
+        </ul>
+    </div>
+</div>
+<div id="container1">
+    <div id="txt1">示例文字A</div>
+    <div id="txt2">示例文字B</div>
+    <div id="txt3">示例文字C</div>
+    <div id="txt4">示例文字D</div>
+    <div id="txt5">示例文字E</div>
+    <div id="txt6">示例文字F</div>
+    <div id="txt7">示例文字G</div>
+    <div id="txt8">示例文字H</div>
+    <div id="txt9">示例文字I</div>
+</div>
+<div id="container2">
+    <div id="foo">示例Div</div><br>
+    <input type="button" value="calc修改宽度" onclick="changeWidth();">
+</div>
+</body>
+</html>
